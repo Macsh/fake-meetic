@@ -1,0 +1,320 @@
+/* ==========
+Global Style
+========== */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.1s linear;
+}
+
+/* ==========
+Layout Index
+========== */
+
+.index {
+    background-image: url(../images/hot-air-ballon.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+#nav-bar {
+    background: rgba(255, 255, 255, 0.8);
+    position: sticky;
+    padding: 10px;
+    text-align: center;
+}
+
+#nav-bar a {
+    font-family: 'Architects Daughter', cursive;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+#nav-bar ul li {
+    list-style: none;
+}
+
+#nav-bar ul li a {
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 1.2em;
+}
+
+.dropdown {
+    position: relative;
+    display: none;
+}
+
+.slogan {
+    margin: 15% 0;
+    text-align: center;
+    
+}
+
+.slogan h2 {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+    font-family: 'Nothing You Could Do', cursive;
+    color: white;
+    font-size: 2.5em;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* ==========
+Layout Compte
+========== */
+
+.account {
+    background: url(../images/hot-air-balloon-members-bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.myaccount {
+    width: 70%;
+    margin: 5% auto;
+    border: black 1px solid;
+    text-align: center;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(255, 255, 255, 0.699);
+}
+
+.myaccount #intro {
+    padding: 20px;
+}
+
+.account-header {
+    height: 100px;
+    background: url(../images/space.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border: white 1px solid;
+    border-radius: 30px 30px 0 0;
+}
+
+.account-header h2 {
+    margin-top: 35px;
+    color: white;
+}
+
+.admin {
+    display: none;
+}
+
+#edit-div{
+    display: none;
+}
+
+#intro p{
+    margin: 10px 0;
+}
+
+#welcome {
+    font-size: 1.5em;
+    padding: 5px 20px 20px;
+}
+
+button, #submit {
+    padding: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border: black 1px solid;
+    border-radius: 30px;
+}
+
+#administration button {
+    margin: 15px 10px 0;
+}
+
+#disconnect {
+    color: white;
+    background-color: red;
+    margin: 20px 0;
+}
+
+#edit {
+    color: white;
+    background-color: blue;
+}
+
+#deactivate{
+    color: white;
+    background-color: black;
+}
+
+#edit-form input {
+    margin: 10px 0;
+    padding: 2px 6px;
+    border-radius: 10px;
+    border: 1px black solid;
+}
+
+#submit {
+    color: white;
+    background-color: green;
+}
+
+/* ==========
+Layout Connexion
+========== */
+
+.connect {
+    background-image: url(../images/hot-air-balloon-background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.connect-form {
+    width: 40%;
+    margin: 12% auto;
+    padding: 20px 10px;
+    text-align: center;
+    border: 2px white solid;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+.connect-form h2 {
+    margin: 20px 0;
+}
+
+.connect-form input {
+    margin: 10px 0;
+}
+
+.connect-form #submit {
+    padding: 10px 15px;
+}
+
+#explosion {
+    position: absolute;
+    display: none;
+}
+
+/* ==========
+Layout Members
+========== */
+
+.members {
+    background: url(../images/hot-air-balloon-members-bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+#search-members {
+    background-color: rgba(255, 255, 255, 0.527);
+    text-align: center;
+}
+
+#search-members a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+#search-members h2 {
+    padding: 10px 0;
+}
+
+.dd-search {
+    position: relative;
+    display: none;
+}
+
+#search-members input {
+    padding: 0 5px;
+    margin: 10px 5px;
+}
+
+#search-members #submit {
+    padding: 10px 15px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 -50px;
+}
+
+.carousel button {
+    margin: 10px 50px;
+    background-color: rgb(255, 184, 52);
+}
+
+#member-card {
+    background-color: rgba(255, 255, 255, 0.699);
+    width: 35%;
+    margin: 5% auto;
+    padding: 25px;
+    border: white 2px solid;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+#member-card p{
+    margin: 15px 0;
+}
+
+/* ==========
+Layout Inscription
+========== */
+
+.inscription {
+    background-image: url(../images/hot-air-ballon.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.form-inscription {
+    width: 70%;
+    margin: 7% auto;
+    padding: 30px;
+    text-align: center;
+    border: 2px white solid;
+    background-color: rgba(255, 255, 255, 0.699);
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-inscription h2 {
+    margin: 10px 0 30px;
+}
+
+.form-inscription p {
+    margin: 15px 5px;
+}
+
+.form-inscription input {
+    margin: 10px 5px;
+}
+
+.form-inscription #submit {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+#password-block {
+    margin: 100px;
+    border: 1px black solid;
+}

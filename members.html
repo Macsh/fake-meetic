@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recherche de membres</title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Nothing+You+Could+Do&family=Roboto&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="members">
+        <div id="nav-bar">
+            <a href="#">
+                <h2>Amitic</h2>
+            </a>
+            <ul class="dropdown">
+                <li id="registerPage"><a href="inscription.html">Inscription</a></li>
+                <li id="connexionPage"><a href="connexion.html">Connexion</a></li>
+                <li id="membersPage"><a href="members.html">Membres</a></li>
+                <li id="myPage"><a>Mon compte</a></li>
+            </ul>
+        </div>
+        <div id="search-members">
+            <a href="#" id="opensearch"><h2>Recherche de membres</h2></a>
+            <div class="dd-search">
+                <form action="" method="post">
+                    <label for="gender">Genre : </label>
+                    <select id="gender" name="gender">
+                        <option value="">--Choisissez une option--</option>
+                        <option value="helicopter">Hélicoptère Apache de combat</option>
+                        <option value="backhoe">Tractopelle Bi-turbo</option>
+                        <option value="nonbinary">Non-binaire</option>
+                    </select><br/>
+                    <label for="city">Ville(s) : </label>
+                    <input type="text" name="search-city" id="city" placeholder="Chercher par ville"><br/>
+                    <div>
+                        <p>Chercher par hobbies :</p>
+                        <label for="dance">Danse</label>
+                        <input type="checkbox" id="dance" class="hobbies" name="dance" value="1">
+                        <label for="skateboard">Skateboard</label>
+                        <input type="checkbox" id="skateboard" class="hobbies" name="skateboard" value="2">
+                        <label for="manga">Manga</label>
+                        <input type="checkbox" id="manga" class="hobbies" name="manga" value="3">
+                        <label for="licorne">Licorne</label>
+                        <input type="checkbox" id="licorne" class="hobbies" name="licorne" value="4">
+                        <label for="cooking">Cuisine</label>
+                        <input type="checkbox" id="cooking" class="hobbies" name="cooking" value="5">
+                        <label for="videogames">Jeux vidéo</label>
+                        <input type="checkbox" id="videogames" class="hobbies" name="videogames" value="6">
+                        <label for="music">Musique</label>
+                        <input type="checkbox" id="music" class="hobbies" name="music" value="7">
+                        <label for="cinema">Cinéma</label>
+                        <input type="checkbox" id="cinema" class="hobbies" name="cinema" value="8">
+                        <label for="drawing">Dessiner</label>
+                        <input type="checkbox" id="drawing" class="hobbies" name="drawing" value="9">
+                        <label for="travel">Voyager</label>
+                        <input type="checkbox" id="travel" class="hobbies" name="travel" value="10">
+                        <label for="reading">Lire</label>
+                        <input type="checkbox" id="reading" class="hobbies" name="reading" value="11">
+                        <label for="singing">Chanter</label>
+                        <input type="checkbox" id="singing" class="hobbies" name="singing" value="12">
+                    </div>
+                    <label for="age">Age : </label>
+                    <select id="age" name="age">
+                        <option value="">--Choisissez une option--</option>
+                        <option value="18/25">18/25</option>
+                        <option value="25/35">25/35</option>
+                        <option value="35/45">35/45</option>
+                        <option value="45+">45+</option>
+                    </select><br/>
+                    <input type="submit" name="submit" id="submit" value="Rechercher">
+                </form>
+            </div>
+        </div>
+
+        <div class="carousel">
+            <button id="before">Précédent</button>
+            <button id="next">Suivant</button>
+        </div>
+
+        <div id="member-card">
+            <p id="welcome"></p>
+            <p id="display-mail"></p>
+            <p id="display-birthdate"></p>
+            <p id="display-gender"></p>
+            <p id="display-city"></p>
+            <p id="hobbies"></p>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="./scripts/navbar.js"></script>
+        <script src="./scripts/members.js"></script>
+    </body>
+</html>

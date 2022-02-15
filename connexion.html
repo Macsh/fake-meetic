@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page de connexion</title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Nothing+You+Could+Do&family=Roboto&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="connect">
+        <div id="nav-bar">
+            <a href="#">
+                <h2>Amitic</h2>
+            </a>
+            <ul class="dropdown">
+                <li id="registerPage"><a href="inscription.html">Inscription</a></li>
+                <li id="connexionPage"><a href="connexion.html">Connexion</a></li>
+                <li id="membersPage"><a href="members.html">Membres</a></li>
+                <li id="myPage"><a>Mon compte</a></li>
+            </ul>
+        </div>
+
+        <div class="connect-form">
+            <h2>
+                Page de connexion
+            </h2>
+
+            <form method="post" action="">
+                <label for="mail">Veuillez renseigner votre mail :</label>
+                <input type="mail" name="mail" id="mail"><br/>
+                <label for="password">Veuillez renseigner votre mot de passe :</label>
+                <input type="password" id="password" name="password">
+                <input type="submit" id="submit" name="submit" value="Envoyer">
+            </form>
+        </div>
+        <div id="explosion"><img src="images/explosion.gif"></div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="./scripts/check_user.js"></script>
+        <script src="./scripts/navbar.js"></script>
+    </body>
+</html>

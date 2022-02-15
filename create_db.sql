@@ -1,0 +1,63 @@
+CREATE DATABASE amitic CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE amitic;
+CREATE TABLE user (id INT NOT NULL AUTO_INCREMENT, firstname VARCHAR(255) NOT NULL, lastname VARCHAR(255) NOT NULL, birthdate DATETIME NOT NULL, gender VARCHAR(30) NOT NULL, city VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, active BIT NOT NULL, PRIMARY KEY (id)) ENGINE=InnoDB;
+CREATE TABLE password (id INT NOT NULL AUTO_INCREMENT, user_id INT NOT NULL, password VARCHAR(255) NOT NULL, FOREIGN KEY(user_id) REFERENCES user(id), PRIMARY KEY (id)) ENGINE=InnoDB;
+CREATE TABLE hobbies (id INT NOT NULL AUTO_INCREMENT, hobby VARCHAR(255), PRIMARY KEY (id))ENGINE=InnoDB;
+CREATE TABLE user_hobby (id INT NOT NULL AUTO_INCREMENT, user_id INT NOT NULL, hobbies_id INT NOT NULL, FOREIGN KEY(user_id) REFERENCES user(id), FOREIGN KEY(hobbies_id) REFERENCES hobbies(id), PRIMARY KEY (id))ENGINE=InnoDB;
+INSERT INTO hobbies (hobby) VALUES ('Dance'), ('Skateboard'), ('Manga'), ('Licorne'), ('Cuisiner'), ('Jeux vidéo'), ('Musique'), ('Cinéma'), ('Dessiner'), ('Voyager'), ('Lire'), ('Chanter');
+INSERT INTO user (firstname, lastname, birthdate, email, gender, city, active) VALUES ('John', 'Doe', '1990-06-12 00:00:00', 'johndoe@test.fr', 'helicopter', 'Lille', 1);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (1, 2);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (1, 3);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (1, 6);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (1, 7);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (1, 8);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (1, 10);
+INSERT INTO password(password, user_id) VALUES('$2y$10$fHy3roXUK1lRmJbU5jwu5uLRCk4AeX0ULJ4Ncl9KALV5SdWT1sN6y', 1);
+INSERT INTO user (firstname, lastname, birthdate, email, gender, city, active) VALUES ('Jacques', 'Filou', '1985-02-10 00:00:00', 'jacquesfilou@test.fr', 'helicopter', 'Lyon', 1);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (2, 1);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (2, 4);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (2, 9);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (2, 11);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (2, 12);
+INSERT INTO password(password, user_id) VALUES('$2y$10$Z8XOkW771Yt50AZu99KBOe4CSjnm2.PBcAmcHGGzzCQKWpQBRSxPW', 2);
+INSERT INTO user (firstname, lastname, birthdate, email, gender, city, active) VALUES ('Christelle', 'Gilet', '1971-10-23 00:00:00', 'christellegilet@test.fr', 'backhoe', 'Bordeaux', 1);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (3, 2);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (3, 5);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (3, 8);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (3, 9);
+INSERT INTO password(password, user_id) VALUES('$2y$10$SudcrRGcrW.5aF6zz.jOP.IhdAKWrLy.PFdRqEvhgk6s2kQc72CdC', 3);
+INSERT INTO user (firstname, lastname, birthdate, email, gender, city, active) VALUES 
+('Catherine', 'Vandorpe', '1974-11-11 00:00:00', 'catherinevandorpe@test.fr', 'backhoe', 'Lille', 1);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (4, 2);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (4, 5);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (4, 8);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (4, 9);
+INSERT INTO password(password, user_id) VALUES('$2y$10$tp5W2o6n91jYnb4sYIGW2e0aTVKxF088ODKIL8NSf/vvGE1yAtIqC', 4);
+INSERT INTO user (firstname, lastname, birthdate, email, gender, city, active) VALUES 
+('Corentin', 'Poire', '1985-10-24 00:00:00', 'corentinpoire@test.fr', 'nonbinary', 'Lille', 1);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (5, 1);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (5, 3);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (5, 9);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (5, 11);
+INSERT INTO password(password, user_id) VALUES('$2y$10$adjxPDNMW6X/LLRk8aploOndV0knJvSnvNml22XkzlTz9OKRnE.ki', 5);
+INSERT INTO user (firstname, lastname, birthdate, email, gender, city, active) VALUES 
+('Franck', 'Vanhoutte', '1969-07-30 00:00:00', 'franckvanhoutte@test.fr', 'helicopter', 'Lille', 1);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (6, 2);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (6, 5);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (6, 7);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (6, 11);
+INSERT INTO password(password, user_id) VALUES('$2y$10$XiAovIfLWzHe4D/GfR0ziui7lA0BIqAdIn2PzS8B/NV8hXycXYYlG', 6);
+INSERT INTO user (firstname, lastname, birthdate, email, gender, city, active) VALUES 
+('Michel', 'Jacquie', '1979-04-21 00:00:00', 'jacquiemichel@test.fr', 'nonbinary', 'Paris', 1);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (7, 3);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (7, 6);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (7, 8);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (7, 12);
+INSERT INTO password(password, user_id) VALUES('$2y$10$71LfoQsF5mBtg9CaRytkFOzUZ9f6RjRa9vctNz4Rm6eH3ys1yNHYW', 7);
+INSERT INTO user (firstname, lastname, birthdate, email, gender, city, active) VALUES 
+('Francky', 'Vincent', '1982-01-24 00:00:00', 'franckyvincent@test.fr', 'helicopter', 'Paris', 1);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (8, 1);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (8, 7);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (8, 9);
+INSERT INTO user_hobby (user_id, hobbies_id) VALUES (8, 10);
+INSERT INTO password(password, user_id) VALUES('$2y$10$jD8IZIlTtjX1kPw/0UqR3OZWGNiXTT5q8iBF78mjR.nUBoNfMwklu', 8);

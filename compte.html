@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Votre compte</title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Nothing+You+Could+Do&family=Roboto&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="account">
+        <div id="nav-bar">
+            <a href="#">
+                <h2>Amitic</h2>
+            </a>
+            <ul class="dropdown">
+                <li id="registerPage"><a href="inscription.html">Inscription</a></li>
+                <li id="connexionPage"><a href="connexion.html">Connexion</a></li>
+                <li id="membersPage"><a href="members.html">Membres</a></li>
+                <li id="myPage"><a>Mon compte</a></li>
+            </ul>
+        </div>
+
+        <div class="myaccount">
+            <div class="account-header">
+                <h2>
+                    Votre compte
+                </h2>
+            </div>
+
+            
+
+            <div class="admin" id="administration">
+                <button id="edit">Edit My Info</button>
+                <button id="deactivate">Deactivate my account</button>
+            </div>
+            
+            <div id="edit-div">
+                <form method="post" id="edit-form">
+                    <label for="mail">Votre mail :</label>
+                    <input type="text" name="mail" id="mail"><br/>
+                    <label for="firstname">Votre prénom :</label>
+                    <input type="text" name="firstname" id="firstname"><br/>
+                    <label for="lastname">Votre nom :</label>
+                    <input type="text" name="lastname" id="lastname"><br/>
+                    <label for="birthdate">Votre date de naissance :</label>
+                    <input type="text" name="birthdate" id="birthdate" disabled><br/>
+                    <label for="gender">Votre genre :</label>
+                    <input type="text" name="gender" id="gender" disabled><br/>
+                    <label for="city">Votre ville :</label>
+                    <input type="text" name="city" id="city"><br/>
+                    <label for="oldpassword">Votre mot de passe actuel :</label>
+                    <input type="password" name="oldpassword" id="oldpassword"><br/>
+                    <label for="password">Votre nouveau mot de passe :</label>
+                    <input type="password" name="password" id="password"><br/>
+                    <input type="submit" id="submit" name="submit" value="Envoyer">
+                </form>
+            </div>
+            
+            <div id="intro">
+                <p id="welcome"></p>
+                <p id="display-mail"></p>
+                <p id="display-birthdate"></p>
+                <p id="display-gender"></p>
+                <p id="display-city"></p>
+                <p id="hobbies"></p>
+            </div>
+
+            <div class="admin">
+                <button id="disconnect">Disconnect</button>
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="./scripts/get_user.js"></script>
+        <script src="./scripts/edit_user.js"></script>
+        <script src="./scripts/navbar.js"></script>
+    </body>
+</html>
